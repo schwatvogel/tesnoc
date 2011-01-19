@@ -1,0 +1,38 @@
+GET services 
+Stats: state = 0
+Stats: state = 1
+Stats: state = 2
+Stats: state = 3
+Stats: state = 1
+Stats: acknowledged = 0
+StatsAnd: 2
+Stats: state = 2
+Stats: acknowledged = 0
+StatsAnd: 2
+Stats: state = 3
+Stats: acknowledged = 0
+StatsAnd: 2
+Stats: state = 1
+Stats: scheduled_downtime_depth = 1
+Stats: host_scheduled_downtime_depth = 1
+StatsOr: 2
+StatsAnd: 2
+Stats: state = 2
+Stats: scheduled_downtime_depth = 1
+Stats: host_scheduled_downtime_depth = 1
+StatsOr: 2
+StatsAnd: 2
+Stats: state = 3 
+Stats: scheduled_downtime_depth = 1
+Stats: host_scheduled_downtime_depth = 1
+StatsOr: 2
+StatsAnd: 2
+Stats: state = 1
+Stats: host_state != 0
+StatsAnd: 2
+Stats: state = 2
+Stats: host_state != 0
+StatsAnd: 2
+Stats: state = 3
+Stats: host_state != 0
+StatsAnd: 2

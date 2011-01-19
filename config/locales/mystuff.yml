@@ -1,0 +1,82 @@
+en:
+  checked: "%{time} ago"
+  check_next: "in %{time}"
+  delete: "delete"
+  welcome: "Welcome %{user}!"
+  header:
+    home: "Home"
+    monitor: "Monitoring"
+    tac: "TAC"
+    settings: "Settings"
+    signout: "Sign Out"
+    signin: "Sign In"
+    profile: "Profile"
+    users: "Users"
+  footer:
+    about: "About"
+    help: "Help"
+    contact: "Contact"
+    impress: "Legal Information"
+    news: "News"
+    tut: "Tutorial"
+    chlang: "Language: "
+  home:
+    title: "Welcome to this test APP"
+    text: "This is the Home Page of my sample app, since i've no better idea i write some stuff here"
+
+
+
+pirate:
+  checked: "%{time} before"
+  check_next: "in %{time}"
+  welcome: " Ahoy %{user}!"
+  header:
+    home: "Home"
+    monitor: "Iseee YA!"
+    tac: "TAC"
+    settings: "Timbers"
+    signout: "Sign Out"
+    signin: "Sign In"
+    profile: "Profile"
+    users: "Mateys"
+  delete: "Over the Plank"
+  footer:
+    about: "What?"
+    help: "Yelp"
+    contact: "Where?"
+    impress: "Legal Information"
+    news: "News"
+    tut: "Tutorrrrrrrial"
+    chlang: "Language:"
+  home:
+    title: "Ahoy there Matey"
+    text: "Arrrrrrrrrr Weigh anchor or I'll give you a taste of the cap'n's daughter"
+
+
+
+de:
+  checked: "vor %{time}"
+  check_next: "in %{time}"
+  welcome: "Hallo %{user}!"
+  header:
+    monitor: "Überwachung"
+    home: "Zuhause"
+    tac: "TAC"
+    settings: "Einstellungen"
+    signout: "Abmelden"
+    signin: "Anmeldung"
+    profile: "Profil"
+    users: "Benutzer"
+  delete: "Löschen"
+  footer:
+    about: "Über"
+    contact: "Kontakt"
+    help: "Hilfe"
+    impress: "Impressum"
+    news: "Neuigkeiten"
+    tut: "Übungen"
+    chlang: "Sprache: "
+  home:
+    title: "Test Applikation"
+    text: "Mangels besseren Inputs hiernur ein Lückenfüller"
+  whats_up: "schreib ma was"

@@ -1,0 +1,40 @@
+<h1>Service Listing</h1>
+<p>
+All found services
+<table class="nagios services">
+	  <th>
+		  status
+	  </th>
+	  <th>
+		  host
+	  </th>
+	  <th>
+		  service
+	  </th>
+	  <th>
+		  last_check
+	  </th>
+  <%@services.each do |s| %> 
+	  <tr>
+		  <% @status=s.state.to_i %>
+
+			  <%= render  "pages/status" 
+		  %>
+
+		  <td class="service hostname">
+			  <%=s.host%>
+		  </td>
+		  <td class="service description">
+			  <%=s.description%>
+		  </td>
+		  <td class="service last_checked">
+		  </td>
+		  <td class="service graph">
+		  </td>
+	  </tr>
+
+  <%end%>
+  </table>
+
+</p>
+

@@ -1,0 +1,22 @@
+<% if @status == 0%>
+	<td class="service status OK">
+		OK
+	</td>
+<%elsif @status== 1%>
+	<td class="service status WARN">
+		WARNING
+	</td>
+<%elsif @status== 2%>
+	<td class="service status WARN">
+		CRITICAL
+	</td>
+<%elsif @status== 3%>
+	<td class="service status WARN">
+		UNKNOWN
+	</td>
+<%else%>
+	<td class="service status STUSS">
+		DAMNED: 
+	</td>
+<%end%>
+

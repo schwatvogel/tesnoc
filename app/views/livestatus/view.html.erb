@@ -1,0 +1,36 @@
+<h1>Livestatus Monitor</h1>
+<% of=params[:filter] %>
+<% ot=params[:type] %>
+<%
+	oth=ot=="host"
+	ots=ot=="service"
+	ofa=of=="all"
+	ofu=of=="uprobs"
+	ofp=of=="probs"
+%>
+<% form_tag '/monitor' do |f|%>
+	<%= radio_button_tag(:type,"host",oth) %>
+	<%= label_tag(:type_host,"Hosts") %>
+
+	<%= radio_button_tag(:type,"service",ots) %>
+	<%= label_tag(:type_service,"Service") %>
+	<br/>
+	<%= radio_button_tag(:filter,"all",ofa) %>
+	<%= label_tag(:filter_all,"All") %>
+	
+	<%= radio_button_tag(:filter,"probs",ofp) %>
+	<%= label_tag(:filter_probs,"Problems") %>
+	
+	<%= radio_button_tag(:filter,"uprobs",ofu) %>
+	<%= label_tag(:filter_uprobs,"Unhandled Problems") %>
+
+	<%= submit_tag "Filter" %>
+<%end%>
+<% if params[:type] == "host" %>
+	<%=render "host_list" %>
+<%elsif params[:type] == "service" %>
+	<%=render "service_list" %>
+<%else%>
+	<p> filter some stuff! </p>
+	<%=render "service_list" %>
+<%end%>

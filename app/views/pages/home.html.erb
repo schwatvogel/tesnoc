@@ -1,0 +1,23 @@
+<% if signed_in? %>
+	<table class=front>
+		<tr>
+			<td class="main">
+				<h2 class="micropost"><%= t :whats_up %></h2>
+					<%= render 'pages/micropost_form' %>
+					<%= render 'pages/feed' %>
+			</td>
+			<td class="sidebar round">
+				<%=render 'pages/user_info'%>
+			</td>
+		</tr>
+	</table>
+<%else%>
+
+
+	<h1><%= t('home.title')%></h1>
+<p>
+<%= t "home.text" %>
+</p>
+
+<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<%end%>

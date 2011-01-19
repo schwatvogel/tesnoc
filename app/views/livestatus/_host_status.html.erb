@@ -1,0 +1,22 @@
+<% if @status == 0%>
+	<td class="host status OK">
+		OK
+	</td>
+<%elsif @status== 1%>
+	<td class="host status NOK">
+		DOWN
+	</td>
+<%elsif @status== 2%>
+	<td class="host status NOK">
+		DOWN
+	
+<%elsif @status== 3%>
+	<td class="host status NOK">
+		UNKNOWN
+	</td>
+<%else%>
+	<td class="host status STUSS">
+		DAMNED: recieved illegal data 
+	</td>
+<%end%>
+

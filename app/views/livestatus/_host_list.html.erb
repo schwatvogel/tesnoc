@@ -1,0 +1,13 @@
+      <table class="monitor hosts">
+                <%@hosts.each do |s|%>
+                        <%@status=s['state'].to_i%>
+                        <tr>
+                                <td><%=s["host_name"]%></td>
+                                <td><%=s["alias"]%></td>
+                                <td><%=t(:checked, :time=>time_ago_in_words(Time.at(s["last_check"].to_i)))%></td>
+                                <%= render "host_status" %>
+                        </tr>
+                <%end%>
+        </table>
+                <%= will_paginate @hosts,:params => params%>
+

@@ -1,0 +1,21 @@
+       <table class="monitor services">
+       <th> host name</th>
+       <th> service name</th>
+       <th> last check</th>
+       <th> state duration</th>
+                <%@services.each do |s|%>
+                        <%@status=s['state'].to_i%>
+                        <tr>
+                                <td><%=s["host_name"]%></td>
+                                <td><%=s["description"]%></td>
+
+                                <td><%=t(:checked, :time=>time_ago_in_words(Time.at(s["last_check"].to_i)))%></td>
+                                <td><%=time_ago_in_words(Time.at(s["last_state_change"].to_i))%></td>
+                                <%= render "service_status" %>
+				<!--	<td># link_to "graph", "http://#{request.host}#{s["action_url_expanded"]}" %></td>-->
+                        </tr>
+                <%end%>
+        </table>
+                <%= will_paginate @services,:params => params%>
+
+

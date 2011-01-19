@@ -1,0 +1,52 @@
+<h1>Hosts</h1>
+<p>
+  Listing all Your Hosts
+  <table class="nagios hosts">
+	  <th>
+		  status
+	  </th>
+	  <th>
+		 name 
+	  </th>
+	  <th>
+		  address
+	  </th>
+	  <th>
+		  last_check
+	  </th>
+	  <th>
+		  next_check
+	  </th>
+	  <th>
+		 services 
+	  </th>
+  <%@hosts.each do |h| %> 
+	  <tr>
+		  <% @status=h.state.to_i %>
+
+			  <%= render  "pages/status" 
+		  %>
+
+		  <td class="host hostname">
+			  <%=h.name%>
+		  </td>
+		  <td class="host address">
+			  <%=h.address%>
+		  </td>
+		  <td class="host checked">
+			  <%=t(:checked, :time=>time_ago_in_words(Time.at(h.last_check.to_i)))%>
+		  </td>
+		  <td class="host checked">
+			  <%=t(:check_next, :time=>time_ago_in_words(Time.at(h.next_check.to_i)))%>
+		  </td>
+		  <td class="host host_services">
+			  <%= link_to "Services", services_path( :host_name=>h.name )%>
+			  </td>
+
+	  </tr>
+
+  <%end%>
+  </table>
+
+</p>
+

@@ -1,0 +1,72 @@
+<h1>Tactical Overview</h1>
+<table class="tac host">
+	<th> <strong>HOSTS</strong></th>
+        <th> UP</th>
+        <th> DOWN</th>
+        <th> UNREACHABLE</th>
+        <th> PENDING</th>
+	<tr>
+		<td>overall</td>
+		<td><%=@hosts[0]%></td>
+		<td><%=@hosts[1]%></td>
+		<td><%=@hosts[2]%></td>
+		<td><%=@hosts[3]%></td>
+	</tr>
+	<tr>
+		<td>unhandled</td>
+		<td></td>
+		<td><%=@hosts[4]%></td>
+		<td><%=@hosts[5]%></td>
+		<td><%=@hosts[6]%></td>
+	</tr>
+	<tr>
+		<td>in downtime</td>
+		<td></td>
+		<td><%=@hosts[7]%></td>
+		<td><%=@hosts[8]%></td>
+		<td><%=@hosts[9]%></td>
+	</tr>
+
+</table>
+<br/>
+<br/>
+<table class="tac service">
+        <th>SERVICES </th>
+        <th> OK</th>
+        <th> WARNING</th>
+        <th> CRITICAL</th>
+        <th> UNKNOWN</th>
+	<tr>
+		<td>overall</td>
+		<td><%=@services[0]%></td>
+		<td><%=@services[1]%></td>
+		<td><%=@services[2]%></td>
+		<td><%=@services[3]%></td>
+	</tr>
+	<tr>
+		<td>unhandled</td>
+		<td></td>
+		<td><%=@services[4]%></td>
+		<td><%=@services[5]%></td>
+		<td><%=@services[6]%></td>
+	</tr>
+	<tr>
+		<td>in downtimes</td>
+		<td></td>
+		<td><%=@services[7]%></td>
+		<td><%=@services[8]%></td>
+		<td><%=@services[9]%></td>
+	</tr>
+	<tr>
+		<td>on problem hosts</td>
+		<td></td>
+		<td><%=@services[10]%></td>
+		<td><%=@services[11]%></td>
+		<td><%=@services[12]%></td>
+	</tr>
+
+
+</table>
+
+
+

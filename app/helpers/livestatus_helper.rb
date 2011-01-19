@@ -1,0 +1,2 @@
+module LivestatusHelper
+end
