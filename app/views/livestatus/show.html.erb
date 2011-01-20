@@ -1,0 +1,16 @@
+<pre>
+<%= @service.class %>
+</pre>
+<% if !@service.nil? %>
+	<% @service[0].each do |k,v| %>
+		<li><%= k %> --> <%=v  %></li>
+	<%end%>
+<%elsif !@host.nil? %>
+	<span> should render host detail page, not done yet</span>
+	<% @host[0].each do |k,v| %>
+		<li><%= k %> ---> <%= v%>
+	<%end%>
+<%else%>
+	<H1> OOOPS, this should not have happened</H1>
+<%end%>
+
