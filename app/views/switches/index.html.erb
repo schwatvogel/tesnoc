@@ -1,0 +1,12 @@
+<h1>Switch#index</h1>
+<%= link_to "add switch", new_switch_path %>
+<table class="switches">
+	<% @switches.each do |s| %>
+		<tr>
+		<td><%= s.name %></td>
+		<td><%= s.description %></td>
+		<td><%= link_to "edit", edit_switch_path(s) %></td>
+	</tr>
+<%end%>
+</table>
+

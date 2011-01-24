@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.impressum '/impressum', :controller => 'pages', :action => 'impressum'
 	map.resources :livestatus
 	map.resources :users
+	map.resources :switches
 	map.resources :sessions, :only => [:new,:create,:destroy]
 	map.resources :microposts, :only => [:create,:destroy]
 	map.signup '/signup' ,  :controller => 'users',    :action => 'new'

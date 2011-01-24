@@ -8,6 +8,7 @@ en:
     monitor: "Monitoring"
     tac: "TAC"
     settings: "Settings"
+    switches: "Switches"
     signout: "Sign Out"
     signin: "Sign In"
     profile: "Profile"

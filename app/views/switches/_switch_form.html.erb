@@ -1,0 +1,11 @@
+<%form_for @switch do |f|%>
+	        <%= f.error_messages%>
+		<%= f.label :name%>
+		<%= f.text_field :name %>
+		<br>
+		<%= f.label :description%>
+		<%= f.text_field :description %>
+		<br>
+		<%= submit_tag "save"%>
+	<%end%>
+
