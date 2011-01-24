@@ -1,0 +1,18 @@
+<h1> all switchports </h1>
+<%=link_to "new port", new_switchport_path %>
+<table>
+	<th> name </th>
+	<th> user </th>
+	<th> switch </th>
+	<th> actions </th>
+<%@switchports.each do |s|%>
+	<tr>
+		<td><%= s.name%></td>
+		<td><%= s.user.name%></td>
+		<td>
+			<%=link_to "#{s.switch.name}(#{s.switch.description})" , edit_switch_path(s.switch) %>
+		</td>
+		<td> <%= link_to "edit" ,edit_switchport_path(s) %> </td>
+	</tr>
+<%end%>
+</table>

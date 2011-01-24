@@ -1,0 +1,10 @@
+<% form_for @switchport do |f| %>
+	<%=f.label :user %>
+	<%= collection_select "switchport","user_id" , User.all ,"id", "name" %>
+	<%=f.label :switch %>
+	<%= collection_select "switchport","switch_id" , Switch.all ,"id", "name" %>
+	<br>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.submit "save" %>
+<%end%>

@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
 	attr_accessible :name, :email, :password, :password_confirmation
 	
 	has_many :microposts, :dependent => :destroy
+	has_many :switchports
 
 	EmailRegex= /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 

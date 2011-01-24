@@ -26,7 +26,7 @@ class SwitchesController < ApplicationController
 	  @switch=Switch.find_by_id(params[:id])
 	  if @switch.update_attributes(params[:switch])
 		  flash[:success]="Switch updated"
-		  redirect_to switches_path
+		  redirect_back_or switches_path
 	  else
 		  flash[:error]="Update failure"
 		  render 'edit'
